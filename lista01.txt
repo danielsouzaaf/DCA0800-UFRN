@@ -27,4 +27,56 @@
 14.	 A CPU do computador é a responsável pela realização das operações de processamento, sejam eles cálculos matemáticos, cálculos lógicos, etc, e pelas operações de controle durante a execução de um programa. O que define a velocidade de uma CPU é a quantidade de instruções que ela é capaz de executar por segundo.
 15. 	 Mesmo com a questão estando bastante ambígua, do meu ponto de vista, a primeira opção seria a melhor para o processamento de dados simultâneos, dada a sua superioridade à capacidade de armazenamento em memória secundária (os discos), a sua maior velocidade de internet e a sua maior capacidade de operações por segundo. Contudo, a falta de informação da questão não dá uma resposta exata para a mesma.
 16.	 Não, pois a unidade relacionada com o armazenamento dos programas é a memória secundária (os discos) e não a CPU, que é a responsável pelo poder de processamento.
-17.	    
+17.	 Caso o sistema utilize memória virtual, é válido, visto que um incremento na quantidade de memória RAM diminui a necessidade de utilização da memória virtual, que fica armazenada no disco, reduzindo, assim, o volume de acessos ao disco, melhorando seu desempenho para outras atividades.
+18.	 Pois os programas paralelizáveis utilizam mais de um processador para a sua execução, sendo, assim, impossibilitado de rodar em um sistem com um único processador.
+19.	 Tanto o item A como o item B se aplicam à memória secundária, visto que as operações em disco são de fato mais lentas, mas, ao mesmo tempo, a sua capacidade de armazenamento é bem maior que a de memória secundária.
+20.	 Estrutura de uma CPU:  
+
+                                   =========== OPERANDOS ===========
+				   ||				  ||
+				   \/                             \/
+				______________            ______________
+				\	      \          /	       /
+				 \ 	       \        /	      /
+				  \	        \      /             /
+				   \	         \    /             /
+				    \		  \  /             /
+	CONTROLE =============>	     \	           \/             /    ================> CÓDIGOS DE CONDIÇÃO
+				      \                          /
+				       \                        /
+				        \         ULA          /
+				         \____________________/
+					 	   
+						   ||
+						   ||
+						   ||
+						   ||
+						   ||
+						   \/
+						Resultado
+						
+	 A CPU possui dois componentes, que são a Unidade Aritmética e Lógica (ULA) e a Unidade de Controle(UC). A UC é a responsável pelo fluxo de dados e pela interpretação de cada instrução do programa, sendo todo o processamento controlado e coordenado por esta. Já a ULA é a responsável por realizar as operações matemáticas e lógicas com os dados.
+21.	 O computador adota o sistema binário. Sua menor unidade é 8 bits.
+22.	 Microprocessador.
+23. 	 Ser responsável pelo processamento, controle e gerenciamento das informações.
+24.	 As respostas I e II estão corretas.
+25. 	 Memória não volátil, somente para leitura de informações que serve como manual de consulta do computador.
+26.	 O Gravador de CD é um dispositivo de armazenamento magnético.
+27.	 Word, Excel, PowerPoint.
+28.	 Gravador de CD.
+29.	 Microprocessador.
+30.	 É totalmente perdido.
+31.	 Suprir a falta de energia elétrica por um determinado período.
+32.	 Memória principal da máquina, volátil.
+33.	 Matriciais, à laser e jato de tinta
+34.	 II, III, I.
+35.	 F, V, V.
+36.	 3, 1, 2.
+37.	 Com um byte podemos representar 8 caracteres diferentes.
+	 Os dois estados que um bit pode assumir podem representar-se simbolicamente pelos símbolos 0 e 1.
+	 1 Kbyte corresponde a 1024 bytes.
+	 1 Mbyte corresponde aproximadamente a um 1.048.576 de bytes.
+	 Um dispositivo que possa armazenar 1.073.741.824 bytes, tem capacidade de 1gb.
+	
+
+
