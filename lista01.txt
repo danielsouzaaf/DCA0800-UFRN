@@ -1,11 +1,11 @@
-***************************************************************
-*****Universidade Federal do Rio Grande do Norte   	      *
-*****Aluno: Daniel Souza Affonso Ferreira		      *
-*****Matrícula: 20170048953 				      *
-*****Componente: DCA0800 - ALGORITMOS E LOGICA DE PROGRAMACAO *
-*****Professor: Agostinho Brito				      *
-*****Lista 01						      *
-***************************************************************
+***************************************************************************************
+*****Universidade Federal do Rio Grande do Norte   	      			      *
+*****Alunos: Daniel Souza Affonso Ferreira e Nilo de Almeida Medeiros		      *
+*****Matrícula: 20170048953 e 20170048891 		    			      *
+*****Componente: DCA0800 - ALGORITMOS E LOGICA DE PROGRAMACAO 			      *
+*****Professor: Agostinho Brito				      			      *
+*****Lista 01						      			      *
+***************************************************************************************
 
 1. O uso de válvulas nos computadores de 1ª geração era conhecido por provocar um superaquecimento nas máquinas, gerando, assim, um custo adicional com um sistema de ar condicionado para poder dar conta da dissipação do calor produzido pelas válvulas dos computadores.
 2. A maior diferença dos computadores da 2ª geração para os da primeira, com exceção do aumento de capacidade de processamento, é a substituição das válvulas (utilizadas na primeira geração e que eram responsáveis pelo superaquecimento) pelos transistores. Os transistores, por sua vez, eram 100 vezes menores que as válvulas, não exigiam um certo tempo de espera antes de utilizar o computador para permitir que eles aquecessem, como visto, na válvula, consumiam menos energia e eram mais rápidos e mais confiáveis. 
@@ -77,6 +77,58 @@
 	 1 Kbyte corresponde a 1024 bytes.
 	 1 Mbyte corresponde aproximadamente a um 1.048.576 de bytes.
 	 Um dispositivo que possa armazenar 1.073.741.824 bytes, tem capacidade de 1gb.
-	
+38. 	 ❏ Teclado - a
+
+	 ❏ Mouse - a
+
+	 ❏ Microfone - a
+
+	 ❏ HD - b
+
+	 ❏ Impressora - c 
+
+	 ❏ Modem - b
+
+	 ❏ Monitor - c
+
+	 ❏ Scanner - a
+
+	 ❏ CD-Rom - b
+
+	 ❏ Plotter - c
+
+	 ❏ Leitura Ótica - a
+
+	 ❏ Pen drive - b
+
+	 ❏ Disquete - b
+
+	 ❏ Caixa de Som - c
+39.	 Do nosso ponto de vista, o sistema operacional é o sujeito responsável por fazer a gerência dos recursos físicos do computador (hardware) e das suas aplicações (software), abstraindo grande parte das coisas que acontecem nos bastidores, tornando a experiência para o usuário final mais agradável, na maioria dos casos e para a maioria dos usuários.
+40.	 Os monoprogramáveis (ou monotarefa), os multiprogramáveis (ou multitarefa) e os sistemas com múltiplo processadores são os principais tipos de sistemas operacionais. Os sistemas monoprogramáveis  têm como uma das suas principais características a execução de um único programa (job). Para exemplificar, é necessário, exempli gratia, que o programa que está em execução pare de rodar para que outro tenha início. Já os multiprogramáveis se caracterizam por serem mais complexos e, ao mesmo passo, mais eficientes. Diferente do monoprogramável, vários programas dividem os mesmos recursos, permitindo a execução de mais de um programa. 
+41. 	 As system calls são uma camada adicional entre a aplicação e o núcleo, servindo como um mecanismo de proteção. Elas servem pois existem chamadas que podem ser prejudiciais caso sejam feitas diretamente no nucléo, logo, ela abstrai uma parte dessas chamadas e, ao invés de fazer a chamada direta, cria rotinas. As aplicações que desejam fazer alguma operação realizam uma chamada a uma das rotinas do núcleo por meio dessas system calls.
+42.	 ❏ Conjunto de instruções, códigos numéricos que o micro interpreta e executa para realizar tarefas.
+43.	 (3) Word, Excel, Controle de Estoque
+	 (4) Scandisk, Defrag, Antivírus
+	 (1) Windows, Unix, Ms-Dos, Linux
+	 (2) Cobol, Basic, C, Delphi
+44.	 Ubuntu, Fedora, OS X, Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, RHEL, CentOS, OpenSUSE, Linux Mint, ArchLinux, Gentoo, Mandriva, Elementary, Korora, Deepin OS.
+45.	 A linguagem de programação é uma forma padronizada de informar instruções a um computador.
+46. 	 Linguagem de máquina, linguagens assembly e linguagens de alto nível. A linguagem de máquina é uma linguagem no seu estado mais primitivo, não mudando seu estado natural. Ela é formada por strings de números e definem a realização das operações de um computador. Elas são dependentes da máquina em que estão sendo rodadas (ou seja, de pouca portabilidade). As linguagens assembly são linguagens que consistem de abreviações de expressões em inglês que são operações elementares para o computador. As linguagens assembly possuem programas tradutores que convertem a sintaxe utilizada para linguagem de máquina e já é bem mais legível para humanos do que a linguagem de máquina, contudo, mesmo assim. Entra na classificação de linguagens de baixo nível. As linguagens de alto nível são instruçoes que se aproximam bem mais da nossa linguagem e estão mais distantes das linguagens de máquina, por exemplo. Se nas linguagens assembly os programas tradutores se chamavam assemblers, nas linguagens de alto nível os responsáveis por fazer a tradução são os compiladores.
+47.	 As vantagens encontradas são a sua rapidez, pois você está dando a instrução diretamente à máquina, exigindo menos processamento para traduzir o que você escreveu. Uma desvantagem é o fato de que a linguagem muda de acordo com as máquinas, logo, em muitos casos, não seria possível reaproveitar o código que já fora escrito. Somado a isso, o fato de que os códigos em linguagens de máquina tendem a ser bem maiores do que os códigos de linguagens de alto nível, fato que decorre da sua baixíssima abstração, exigiria um tempo absurdo para criar programas que rodassem em diferentes máquinas.
+48.	 Tradução é pegar uma expressão em uma linguagem e achar a sua equivalência na outra, fazendo uma conversão apenas. Já a compilação faz uma leitura completa do código escrito e cria uma tabela com as informações necessárias e que serão "traduzidas" mais à frente. Contudo, a "tradução" que acontece na compilação é diferente da que ocorre no assembly, por exemplo. A "tradução" da compilação faz alterações no código enquanto traduz, otimizando-o, que difere da conversão que ocorre na tradução mencionada anteriormente.
+49.	 (F) O compilador traduz a linguagem de baixo nível para a linguagem de alto nível.
+
+	 (F) O compilador traduz a linguagem de alto nível para a linguagem de baixo nível.
+
+	 (F) Linguagens de alto nível mostram-se mais complicadas para o programador.
+
+	 (V) Linguagens de baixo nível geram, normalmente, programas maiores do que as linguagens de alto nível.
+
+	 (V) Assembly é o programa que faz a tradução do programa em código binário.
+
+	 (F) Assembly é uma linguagem de alto nível.
+
+	 (F) Programadores preferem linguagens de baixo nível, pois como o nome sugere, oferecem um nível de dificuldade mais reduzido.
 
 
