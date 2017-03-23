@@ -113,3 +113,196 @@ int main()
 			printf("VALOR1 < VALOR2\n");
 		return 0;
 }
+09.
+#include <stdio.h>
+
+int main()
+{
+		float a;
+		printf("digite o custo de fábrica do carro: ");
+		scanf("%f", &a);
+		printf("valor final do carro: %f\nImposto eh roubo: %f\nLucro do distribuidor: %f\n", a * 1.45 + a * 1.12, 0.45 * a, 0.12 * a);
+		return 0;
+}
+10.
+#include <stdio.h>
+
+int main()
+{
+		int a, b;
+		printf("digite a velocidade maxima permitida na avenida e a velocidade do motorista separadas por espaço: ");
+		scanf("%d%d", &a, &b);
+		if (b - a <= 10)
+			printf("multa: 50 reais");
+		else if(b - a <= 30)
+			printf("multa: 100 reais");
+		else
+			printf("multa: 200 reais");
+		return 0;
+}
+11.
+#include <stdio.h>
+
+int main()
+{
+		int a;
+		printf("digite a quantidade de latao desejada(em gramas): ");
+		scanf("%d", &a);
+		printf("quantidade de cobre: %fg\n quantidade de zinco: %fg\n", 0.7 * a, 0.3 * a);
+		return 0;
+}
+12.
+#include <stdio.h>
+
+int main()
+{
+		int a, b;
+		printf("digite os 2 numeros inteiros separados por espaço: ");
+		scanf("%d%d", &a, &b);
+		if (b == 0)
+			printf("DIVISÃO POR ZERO");
+		else
+			printf("quociente: %d\n", a / b);
+		return 0;
+}
+13.
+#include <stdio.h>
+
+int main()
+{
+		float a, b, c, t;
+		printf("digite os 3 numeros separados por espaço: ");
+		scanf("%f%f%f", &a, &b, &c);
+		if (a < b)
+		{
+			t = a;
+			a = b;
+			b = t;
+		}
+		if (a < c)
+		{
+			t = a;
+			a = c;
+			c = t;
+		}
+		if (b < c)
+		{
+			t = b;
+			b = c;
+			c = t;
+		}
+		printf("maior numero: %f", a);
+		return 0;
+}
+14.
+#include <stdio.h>
+
+int main()
+{
+		float a, b, c, t;
+		printf("digite os 3 numeros separados por espaço: ");
+		scanf("%f%f%f", &a, &b, &c);
+		if (a < b)
+		{
+			t = a;
+			a = b;
+			b = t;
+		}
+		if (a < c)
+		{
+			t = a;
+			a = c;
+			c = t;
+		}
+		if (b < c)
+		{
+			t = b;
+			b = c;
+			c = t;
+		}
+		printf("numeros ordenados em ordem crescente: %f  %f  %f", c, b, a);
+		return 0;
+}
+15.
+#include <stdio.h> 
+#include <math.h>
+
+  int main(void) {
+    float a, b, c, d, x1, x2;
+
+    printf("digite a: ");
+    scanf("%f", &a);
+    printf("digite b: ");
+    scanf("%f", &b);
+    printf("digite c: ");
+    scanf("%f", &c);
+    printf("%6.2fx^2+%6.2fx+%6.2f=0\n", a, b, c);
+
+    d = b * b - 4 * a * c;
+    if (d >= 0.0) {
+      x1 = (-b + sqrt(d)) / (2 * a);
+      x2 = (-b - sqrt(d)) / (2 * a);
+      printf("x1 = %f\n", x1);
+      printf("x2 = %f\n", x2);
+    }
+    return 0;
+  }
+16.
+#include <stdio.h> 
+
+  int main(void) {
+    float a, b, c;
+
+    printf("Digite os 3 números no plano que são candidatos aos lados de um triângulo: ");
+    scanf("%f%f%f", &a, &b, &c);
+    
+    if (a < b+c && b < a+c && c < a+b)
+    {
+		printf("eh um triângulo ");
+		
+		if ( a == b && b == c)
+			printf("equilátero\n");
+		else if( a == b || a == c || b == c)
+			printf("isósceles\n");
+		else
+			printf("escaleno\n");
+	}
+	else
+		printf("não forma triângulo");
+    return 0;
+  }
+17.
+#include <stdio.h> 
+#include <math.h>
+
+  int main(void) {
+    int a, b, c, d, soma;
+    soma = 0;
+    printf("digite 4 numeros inteiros separados por espaço: ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    
+    if(a % 2 == 0) soma += a;
+    if(b % 2 == 0) soma += b;
+    if(c % 2 == 0) soma += c;
+    if(d % 2 == 0) soma += d;
+    
+    printf("soma dos numeros pares: %d", soma);
+    return 0;
+  }
+18.
+#include <stdio.h> 
+#include <math.h>
+
+  int main(void) {
+    int a;
+    
+    printf("digite o ano a ser verificado: ");
+    scanf("%d", &a);
+    
+    if(a % 400 == 0 || (a % 4 == 0 && a % 100 != 0))
+		printf("eh bissexto");
+    else
+		printf("nao eh bissexto");
+    return 0;
+  }
+
