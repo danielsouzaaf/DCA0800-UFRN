@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+float desvioPadrao(float x[], float media, int n)
+{
+	float desviopadrao;
+	desviopadrao = 0.0;
+	int j;
+	for (j = 0; j < n; j++)
+	{
+		desviopadrao += pow(x[j] - media, 2);
+	}
+	return sqrt(desviopadrao / (n - 1));
+}
+
+int main (void)
+
+===============================Calcular a média e o desvio padrão recebendo N entradas===========
+{
+	float x[100], media;
+    int i, n;
+    printf("digite a quantidade de elementos que você irá inserir: ");
+    scanf("%d", &n);
+    media = 0.0;
+    i = 0;
+    for (i = 0; i < n; i++)
+    {
+		printf("digite o %d elemento", i);
+		scanf("%f", &x[i]);
+		media += x[i];
+	}
+	media /= n;
+	printf("A média é: %f e o desvio padrão é de: %0.1f", media, desvioPadrao(x, media, n));
+	
+    return 0;
+    
+}
+
+==============Transpor uma matriz==========
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (void)
+{
+	
+	float z[4][4];
+	float w[4][4];
+	int i, j;
+	for(i = 0; i < 4; i++)
+	{
+		for(j = 0; j < 4; j++)
+		{
+			z[i][j] = rand()%10;
+			printf("%f ", z[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	for(i = 0; i < 4; i++)
+	{
+		for(j = 0; j < 4; j++)
+		{
+			w[j][i] = z[j][i];
+			printf("%f ", w[j][i]);
+		}
+		printf("\n");
+	}
+	return 0;
+    
+}
+
+
+
