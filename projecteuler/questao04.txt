@@ -1,0 +1,41 @@
+==============================Largest palindrome product======================
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (void)
+{
+	
+	int achou = 0, i, z;
+	for (i = 998; i >= 100; i--)
+	{
+    char n[7];
+    sprintf(n,"%d", i);
+    n[3]= n[2];
+    n[4]= n[1];
+    n[5]= n[0];
+    int x =atoi(n);
+    //o limite existe para delimitar a condição para a próxima iteração do for. o limite é a raiz inteira do valor de x pois,
+    //para fazer a checagem, eu verifico se o meu valor para um dos divisores do palíndromo é maior que a raiz quadrada
+    //do meu palíndromo. essa checagem diminui a complexidade do algoritmo e faz com que teste somente o maior valor possível
+    //para o palíndromo
+    int limite = sqrt((float) x);
+    
+    for (z = 999; z >= limite; z--)
+    {
+		
+		if (x%z==0){
+		  printf("%d, i = %d, z = %d\n", limite, i, z);
+		  printf("%d",x);
+		  achou = 1;
+		  break;
+      }
+    }
+    if (achou == 1) break;
+	}
+	return 0;
+    
+}
+
+
+
