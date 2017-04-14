@@ -1,0 +1,31 @@
+====================================Special Pythagorean triplet============
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (void)
+{
+	
+	int soma = 1000;
+	int a, b, c;
+	
+	for (a = 1; a < soma / 3; a++)
+	{
+		for (b = a + 1; b < soma / 2; b++)
+		{
+			c = soma - b - a;
+			if (a*a + b*b == c*c)
+			{
+				printf("a = %d, b = %d, c = %d\n", a, b, c);
+				printf("a*b*c = %d", a*b*c);
+			}
+		}
+	}
+	
+
+	return 0;
+    
+}
+
+
+
