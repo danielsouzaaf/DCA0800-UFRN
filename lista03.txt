@@ -1,0 +1,233 @@
+***************************************************************************************
+*****Universidade Federal do Rio Grande do Norte   	      			      *
+*****Alunos: Daniel Souza Affonso Ferreira e Nilo de Almeida Medeiros		      *
+*****Matrícula: 20170048953 e 20170048891 		    			      *
+*****Componente: DCA0800 - ALGORITMOS E LOGICA DE PROGRAMACAO 	                      *
+*****Professor: Agostinho Brito			                                      *
+*****Lista 03     					     			      * 
+
+==========================================Questão 1=================================================================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (void)
+{
+	//Calcular a soma dos 100 primeiros nº naturais.
+
+
+	//soma dos n termos de uma pa
+	int i = (1 + 100) * 100 / 2;
+	printf("%d", i);
+
+	return 0;
+    
+}
+========================================Questão 2==================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (void)
+{
+	//Imprimir os múltiplos de 7 menores que 200.
+
+
+	int i;
+	printf("múltiplos de 7 menores que 200: 0 ");
+	for (i = 7; i <= 200; i += 7)
+	printf("%d ", i);
+
+	return 0;
+    
+}
+
+=================================Questão 04========================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (void)
+{
+	//Calcular e imprimir os números divisíveis por 4 menores que 100.
+
+
+	int i;
+	printf("números divisíveis por 4 menores que 100: ");
+	for (i = 4; i <= 100; i += 4)
+	printf("%d ", i);
+
+	return 0;
+    
+}
+
+================================Questão 05=========================================
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int fatorial(int x)
+{
+    int result;
+    result = x;
+    if (x > 1)
+    {
+ 
+        return result*fatorial(x-1);
+    }
+    else{
+        return 1;
+    }
+}
+ 
+int main()
+{
+	
+	//Para calcular o fatorial de um número qualquer.
+
+
+    int a, n;
+    n = 0;
+    printf("digite o número para calcular a fatorial: ");
+    scanf("%d", &n);
+    a = fatorial(n);
+    printf("fatorial = %d\n", a);
+    return 0;
+}
+==================================Questão 06=====================================
+#include <stdio.h>
+#include <stdlib.h>
+
+ 
+int main()
+{
+	
+	//Imprimir o menor inteiro positivo x cujo quadrado é superior a um valor L dado.
+
+
+    int x, l;
+    x = 1;
+    l = 0;
+    printf("digite o valor L: ");
+    scanf("%d", &l);
+    while(x * x < l)
+    {
+		x++;
+	}
+    printf("lado = %d\n", x);
+    return 0;
+}
+====================================Questão 07===================================
+#include <stdio.h>
+#include <stdlib.h>
+
+void tabuada(int n)
+{
+	int i;
+	printf("Imprimindo a tabuada do número %d\n", n);
+	for (i = 1; i <= n; i++)
+	{
+		printf("%d X %d = %d\n", n, i, n * i);
+	}
+}
+
+int main()
+{
+	
+	//Imprimir a tabuada do número 4.
+
+	tabuada(4);
+    
+    return 0;
+}
+
+=============================Questão 08===========================================
+#include <stdio.h>
+#include <stdlib.h>
+
+void tabuada(int n)
+{
+	int i;
+	printf("Imprimindo a tabuada do número %d\n", n);
+	for (i = 1; i <= n; i++)
+	{
+		printf("%d X %d = %d\n", n, i, n * i);
+	}
+}
+
+int main()
+{
+	
+	//Imprimir a tabuada de qualquer número n.
+
+	int n;
+	n = 0;
+	printf("digite o número que você deseja descobrir a tabuada: ");
+	scanf("%d", &n);
+	tabuada(n);
+    
+    return 0;
+}
+=================================Questão 09========================================
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	
+	//Calcular e mostrar a média aritmética dos números pares compreendidos entre 13 e 73.
+	
+	
+	//Utilizando os conceitos de P.A., temos que a fórmula da soma dos termos de uma P.A. finita é dada pela fórmula: soma = (a1 + an) * n / 2.
+	//Com isso, sabemos a soma de todos os termos e, mais à frente, dividimos pela quantidade de termos, que coincide a quantidade de termos da P.A.
+	//Logo, não é necessário multiplicar a soma por n, visto que, mais à frente, n será associado com o seu inverso multiplicativo, tendo como resultado 1.
+	int i = (14 + 72) / 2;
+	
+	printf("média aritmética: %d", i);
+	    
+    return 0;
+}
+
+====================================Questão 10=====================================
+nclude <stdio.h>
+#include <stdlib.h>
+
+void printArray(int x[], int length)
+{
+	int i;
+	for (i = 0; i < length; i++)
+	{
+		printf("%d ", x[i]);
+	}
+	printf("\n Quantidade de elementos: %d \n", length);
+}
+
+int main()
+{
+	
+	//Ler 10 valores, um de cada vez, e contar quantos deles estão no intervalo [10,50] e quantos deles estão fora deste intervalo, mostrando estas informações.
+
+
+	
+	int in[10], out[10], qtdDentro, qtdFora, i, aux;
+	qtdDentro = qtdFora = 0;
+	for (i=0;i<10;i++)
+	{
+		printf("digite o %d número: ", i + 1);
+		scanf("%d", &aux);
+		if (aux >= 10 && aux <= 50)
+		{
+			in[qtdDentro++] = aux;
+		}
+		else
+		{
+			out[qtdFora++] = aux;
+		}
+	}
+	printf("números digitados dentro do intervalo: ");
+	printArray(in, qtdDentro);
+	printf("números digitados fora do intervalo: ");
+	printArray(out, qtdFora);
+	    
+    return 0;
+}
+
