@@ -73,4 +73,53 @@ int main (void)
 }
 
 
+==================================Reverse em um array (com a criação de uma função que copia um array para outro array de mesmo tamanho===
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void copyArray(int a[], int b[], int length)
+{
+	int i;
+	for ( i = 0; i < length; i++)
+	{
+		b[i] = a[i];
+	}
+	
+}
+
+void reverse(int a[], int n, int index)
+{
+	int aux;
+	aux = a[index];
+	a[index] = a[n - 1 - index];
+	a[n - 1 - index] = aux;
+}
+
+void printArray(int x[], int length)
+{
+	int i;
+	for (i = 0; i < length; i++)
+	{
+		printf("%d ", x[i]);
+	}
+	printf("\n Quantidade de elementos: %d \n", length);
+}
+
+int main (void)
+{
+
+	int x[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	int i;
+	
+	for (i = 0; i < 10 / 2; i++)
+	{
+		reverse(x, 10, i);
+	}
+	printArray(x, 10);		
+
+	return 0;
+    
+}
+
 
