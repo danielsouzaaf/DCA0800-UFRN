@@ -188,7 +188,7 @@ int main()
 }
 
 ====================================Questão 10=====================================
-nclude <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 void printArray(int x[], int length)
@@ -230,4 +230,83 @@ int main()
 	    
     return 0;
 }
+================================Questão 11=========================================
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int checkPrime(int n)
+{
+	int i;
+	if (n <= 1) return 0;
+	//otimização do código seguindo o clivo de Eratóstenes.
+	for (i = 2; i*i <= n; i++)
+	{
+		if (n % i == 0) return 0;
+	}
+	return 1;
+}
+
+int main (void)
+{
+	
+	//Ler um número e escreva se ele "é primo" ou "não é primo".
+
+
+	int i;
+	i = 0;
+	printf("digite o numero que vc deseja checar se eh primo: ");
+	scanf("%d", &i);
+	if (checkPrime(i) == 1) printf("é primo");
+	else printf("não é primo");	
+
+	return 0;
+    
+}
+
+===============================Questão 12===========================================
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int checkPrime(int n)
+{
+	int i;
+	if (n <= 1) return 0;
+	//otimização do código seguindo o clivo de Eratóstenes.
+	for (i = 2; i*i <= n; i++)
+	{
+		if (n % i == 0) return 0;
+	}
+	return 1;
+}
+
+int main (void)
+{
+	
+	//Calcular a diferença entre o 6o e o 12o números Primos.
+
+
+	int seisprimo, i, atualprimo;
+	i = 2;
+	atualprimo = 0;
+	seisprimo = 0;
+	while (atualprimo < 12)
+	{
+		if (checkPrime(i) == 1)
+		{
+			if (++atualprimo == 6)
+			{
+				seisprimo = i;
+			}
+		}
+		if(atualprimo < 12) i++;
+	}
+	printf("diferença entre o 6primo e o 12primo = %d - %d = %d", seisprimo, i, seisprimo - i);
+		
+
+	return 0;
+    
+}
+
 
