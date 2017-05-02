@@ -629,3 +629,138 @@ int main (void)
     
 }
 
+==================================Questão 22======================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+void printArrayTree(int array[], int length)
+{
+	int maxLength = array[0];
+	
+	int i, k;
+	
+	for (i = 0; i < length; i++)
+	{
+		if (array[i] > maxLength)
+		{
+			maxLength = array[i];
+		}
+	}
+	
+	for (k = maxLength; k > 0; k--)
+	{
+	
+		for (i = 0; i < length; i++)
+		{
+			if (array[i] >= k)
+			{
+				printf("*");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		
+		printf("\n"); 
+	}
+}
+
+
+int main (void)
+{
+	
+	
+	int arr[5] = {4, 5, 6, 1, 8};
+	
+	printArrayTree(arr, 5);
+	
+	return 0;
+    
+}
+===================================Questão 23======================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+void countCharsAndWords(char text[])
+{
+	int i, invalidos, palavras, len;
+	len = strlen(text);
+	palavras = 0;
+	invalidos = 0;
+	
+	printf("%s: %d \n", text, len);
+	
+	for(i = 0; i < len; ++i)
+	{
+		if(text[i] == ' ' || text[i] == '\n')
+		{
+			invalidos++;
+			
+			if(i > 0 && (text[i-1] != ' ' && text[i-1] != '\n'))
+			{
+			    palavras++;
+			}
+		}
+	}
+	
+	printf("%d caracteres e %d palavras", len - invalidos, palavras);
+	
+}
+
+
+int main (void)
+{
+	
+	
+	char texto[200];
+	
+	printf("digite a frase: ");
+	fgets(texto, 200, stdin);
+	
+	countCharsAndWords(texto);
+		
+	return 0;
+    
+}
+
+=================================Questão 24=======================================
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void reverse(char text[])
+{
+	int i;
+	
+	char aux;
+	
+	for (i = strlen(text) - 1; i > (strlen(text) - 1) / 2; i--)
+	{
+		aux = text[i];
+		text[i] = text[strlen(text) - i - 1];
+		text[strlen(text) - i - 1] = aux;
+	}
+	
+}
+
+int main (void)
+{
+
+	char texto[100];
+	
+	printf("digite o texto: ");
+	fgets(texto, 100, stdin);
+	
+	reverse(texto);
+	puts(texto);
+	
+	return 0;
+    
+}
+
