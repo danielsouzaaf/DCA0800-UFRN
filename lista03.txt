@@ -415,4 +415,217 @@ int main (void)
     
 }
 
+==================================Questão 16======================================
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void reverse(char text[])
+{
+	int i;
+	
+	char aux;
+	
+	for (i = strlen(text) - 1; i > (strlen(text) - 1) / 2; i--)
+	{
+		aux = text[i];
+		text[i] = text[strlen(text) - i - 1];
+		text[strlen(text) - i - 1] = aux;
+	}
+	
+}
+
+int main (void)
+{
+
+	char texto[100];
+	
+	printf("digite o texto: ");
+	fgets(texto, 100, stdin);
+	
+	reverse(texto);
+	puts(texto);
+	
+	return 0;
+    
+}
+
+
+
+==================================Questão 17======================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+double celsiusToFahrenheit(double celsius)
+{
+	return celsius*1.8 + 32; 
+}
+
+
+int main (void)
+{
+	
+	double celsius, fahrenheit;
+	celsius = 0;
+	fahrenheit = 0;
+	
+	printf("digite a temperatura em celsius: ");
+	scanf("%lf", &celsius);
+	
+	fahrenheit = celsiusToFahrenheit(celsius);
+	printf("fahrenheit = %.1lf", fahrenheit);
+	
+	return 0;
+    
+}
+
+=================================Questão 18=======================================
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+double fahrenheitToCelsius(double fahrenheit)
+{
+	return (fahrenheit - 32 / 1.8);
+}
+
+
+int main (void)
+{
+	
+	double celsius, fahrenheit;
+	celsius = 0;
+	fahrenheit = 0;
+	
+	printf("digite a temperatura em fahrenheit: ");
+	scanf("%lf", &fahrenheit);
+	
+	celsius = fahrenheitToCelsius(fahrenheit);
+	printf("fahrenheit = %.1lf", celsius);
+	
+	return 0;
+    
+}
+
+==============================Questão 19==========================================
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+int aleatorio(int inicio, int limite)
+{
+	srand(time(NULL));
+	int u = (rand() % (limite - inicio + 1)) + inicio;
+	return u;
+	
+}
+
+
+int main (void)
+{
+	int x;
+	
+	x = aleatorio(30, 60);
+	
+	printf("x = %d", x);
+	
+	return 0;
+    
+}
+
+=================================Questão 20=======================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+void printFactors(int numero)
+{
+	int i = 2;
+	int aux = numero;
+	int isPrime = 0;
+	printf("%d = ", numero);
+	while(i * i <= numero + 1)
+	{
+		
+		if (numero % i == 0)
+		{
+			numero = numero / i;
+			isPrime = 1;
+		}
+		else
+		{
+			if (isPrime == 1)
+			{
+				printf("%d X ", i);
+				isPrime = 0;
+			}
+			
+			i++;
+
+		}
+	}
+	
+		
+	if (isPrime == 1)
+			{
+				printf("%d X ", i);
+				isPrime = 0;
+			}
+	if (aux == numero || numero != 1)
+	{
+		printf("%d", numero);
+	}
+
+}
+
+
+int main (void)
+{
+	
+	
+	printFactors(1365);
+	
+	return 0;
+    
+}
+
+===================================Questão 21=====================================
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+void printArrayTree(int array[], int length)
+{
+	int i, k;
+	
+	for (i = 0; i < length; i++)
+	{
+		for (k = 0; k < array[i]; k++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+}
+
+
+int main (void)
+{
+	
+	
+	int arr[4] = {10, 3, 7, 5};
+	
+	printArrayTree(arr, 4);
+	
+	return 0;
+    
+}
 
