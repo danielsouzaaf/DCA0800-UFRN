@@ -16,7 +16,7 @@ float desvioPadrao(float x[], float media, int n)
 
 int main (void)
 
-===============================Calcular a média e o desvio padrão recebendo N entradas===========
+===============================Calcular a média e o desvio padrão recebendo N entradas====================================================
 {
 	float x[100], media;
     int i, n;
@@ -73,7 +73,8 @@ int main (void)
 }
 
 
-==================================Reverse em um array (com a criação de uma função que copia um array para outro array de mesmo tamanho===
+===============================Reverse em um array (com a criação de uma função que copia um array para outro array de mesmo tamanho======
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -122,7 +123,7 @@ int main (void)
     
 }
 
-===============Calcular primos em um vetor utilizando o crivo de eratóstenes=====
+===============================Calcular primos em um vetor utilizando o crivo de eratóstenes==============================================
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -177,7 +178,7 @@ int main (void)
 
 
 
-================================Achar uma matriz padrão dentro de uma matriz
+===============================Achar uma matriz pattern dentro de uma matriz maior========================================================
 
 #include <stdio.h>
 #include <stdlib.h>
