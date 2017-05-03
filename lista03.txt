@@ -88,6 +88,10 @@ void divisores(int n)
 
 int main (void)
 {
+
+	//Calcular os divisores de um nº qualquer.
+
+
 	int n;
 	printf("digite o número que você deseja checar os divisores: ");
 	scanf("%d", &n);
@@ -371,6 +375,10 @@ int sumFibo(int n)
 
 int main (void)
 {
+	//A série de Fibonacci é uma sequência de termos que tem como os 2 primeiros termos, respectivamente, os números 0 e 1. A partir daí, os demais termos são //formados seguindo uma certa regra. A série de Fibonacci pode ser vista a seguir:
+
+	//0  1  1  2  3  5  8  13  21...
+	//Descubra a regra que gera a seqüência da série de Fibonacci e escreva um algoritmo que gere os n (solicitados pelo usuário) primeiros termos desta série //e calcula e escreve a soma destes termos.
 
 	int n;
 	printf("digite a quantidade de termos: ");
@@ -383,11 +391,10 @@ int main (void)
 }
 
 ========================================Questão 14===================================================================================
-
 #include <stdio.h>
 #include <stdlib.h>
-
-int generateNumber(int start)
+//Função para achar o primeiro número que satisfaz a condição. Daí para frente, sempre que eu acrescentar 11 no numerador, a divisão terá resto 5.
+int findFirst(int start)
 {
 	int number = start;
 	while (number % 11 != 5)
@@ -400,21 +407,34 @@ int generateNumber(int start)
 
 int main (void)
 {
+	//Gerar 20 números entre 1000 a 1999 que divididos por 11 dão um resto igual a 5.
 
-	int quantity;
-	int start = 1000;
-	
-	for (quantity = 0; quantity < 20; quantity++)
+
+	int quantity, first, start;
+	start = 1000;
+	first = findFirst(start);
+	quantity = 1;
+	printf("números que satisfazem a condição: %d ", first);
+	do {
+		printf("%d ", first + 11 * quantity);
+		++quantity;
+		//Sair do laço caso atinja a quantidade pedida pela questão
+		if (quantity == 20)
+		{
+			break;
+		}
+	}
+	while (first + 11 * quantity < 2000);
+	//Para o caso de não conseguir achar a quantidade de divisores que a questão pede.
+	if (quantity < 20)
 	{
-		start = generateNumber(start);
-		printf("%d", start);
-		if (quantity < 19) printf(", ");
-		start++;
+		printf("\n Infelizmente, dentro do intervalo, só é possível gerar %d números que tem resto 5 quando divididos por 11!", quantity);
 	}
 	
 	return 0;
     
 }
+
 
 ========================================Questão 15===================================================================================
 #include <stdio.h>
@@ -438,6 +458,8 @@ int countOcurrences(char needle, char haystack[])
 
 int main (void)
 {
+	//Contar quantos caracteres 'a' existem em um texto fornecido pelo usuário. Assuma que o usuário não excederá o limite máximo de 100 caracteres.
+
 
 	char texto[100];
 	int quantity;
@@ -475,6 +497,13 @@ void reverse(char text[])
 
 int main (void)
 {
+	//Escrever ao contrário um texto que o usuário forneca. Ex:
+
+	//Entrada
+	//O rato roeu a roupa do rei
+	//Saída
+	//ier od apuor a ueor otar O
+
 
 	char texto[100];
 	
@@ -503,7 +532,9 @@ double celsiusToFahrenheit(double celsius)
 
 int main (void)
 {
-	
+	//Crie uma função para converter de Celsius para Farenheit
+
+
 	double celsius, fahrenheit;
 	celsius = 0;
 	fahrenheit = 0;
@@ -532,7 +563,9 @@ double fahrenheitToCelsius(double fahrenheit)
 
 int main (void)
 {
-	
+	//Crie uma função para converter de Farenheit para Celsius
+
+
 	double celsius, fahrenheit;
 	celsius = 0;
 	fahrenheit = 0;
@@ -557,7 +590,7 @@ int main (void)
 int aleatorio(int inicio, int limite)
 {
 	srand(time(NULL));
-	int u = (rand() % (limite - inicio + 1)) + inicio;
+	int u = (rand() % (limite - inicio)) + inicio;
 	return u;
 	
 }
@@ -565,6 +598,12 @@ int aleatorio(int inicio, int limite)
 
 int main (void)
 {
+	//Crie uma função para gerar um número aleatório no intervalo fechado [A:B[A:B], sendo AA e BB passados como parâmetro para essa função. Ex:
+
+	//int x;
+	//x = aleatorio(30,50);
+	
+
 	int x;
 	
 	x = aleatorio(30, 60);
@@ -624,7 +663,8 @@ void printFactors(int numero)
 
 int main (void)
 {
-	
+	//Crie uma função para imprimir realizar a decomposição em fatores primos de um número inteiro fornecido e imprimir esses fatores. Ex: 1365 = 3 x 5 x 7 x 13
+
 	
 	printFactors(1365);
 	
@@ -656,7 +696,14 @@ void printArrayTree(int array[], int length)
 
 int main (void)
 {
-	
+	//Crie uma função que receba um array de inteiros e desenhe um gráfico vertical usando '*'. Cada linha do gráfico possui quantidade de asteriscos igual o valor numérico dos elementos do array. Ex: para o array formado pelos elementos {4,5,6,1,8}{4,5,6,1,8}, o gráfico seria da forma
+
+	//****
+	//*****
+	//******
+	//*
+	//********
+
 	
 	int arr[4] = {10, 3, 7, 5};
 	
@@ -708,8 +755,18 @@ void printArrayTree(int array[], int length)
 
 int main (void)
 {
+	//Refaça a questão anterior realizando agora o traçado do gráfico na horizontal. Ex: para o array formado pelos elementos {4,5,6,1,8}{4,5,6,1,8}, o gráfico seria da forma
+
+	//    *
+	//    *
+	//  * *
+	// ** *
+	//*** *
+	//*** *
+	//*** *
+	//*****
 	
-	
+
 	int arr[5] = {4, 5, 6, 1, 8};
 	
 	printArrayTree(arr, 5);
@@ -752,7 +809,10 @@ void countCharsAndWords(char text[])
 
 int main (void)
 {
-	
+	//Prepare um programa que leia uma frase do teclado e informe quantas caracteres e palavras foram digitadas. Ex:
+
+	//Digite a frase: o rato roeu a   roupa
+	//15 caracteres, 5 palavras
 	
 	char texto[200];
 	
@@ -788,7 +848,12 @@ void reverse(char text[])
 
 int main (void)
 {
+	//Prepare uma função que receba um literal em um array e o rearrange de trás para frente. Ex:
 
+	//char nome[] = "francisco jose";
+	//puts(nome); mostra "francisco jose"
+	//reverse(nome);
+	//puts(nome); mostra "esoj ocsicnarf"
 	char texto[100];
 	
 	printf("digite o texto: ");
@@ -852,6 +917,10 @@ void printArray(int array[], int length)
 
 int main (void)
 {
+	//Leia um texto que o usuário digitar no teclado. Em seguida, informe a contagem de ocorrências de cada um dos caracteres [a-z] digitados, não importando
+	//se o usuário digitou letras minúsculas ou maiúsculas.
+	
+
 	char texto[200];
 	int ocorrencias[26];
 	printf("digite o texto que você deseja checar:");
