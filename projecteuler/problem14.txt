@@ -1,0 +1,47 @@
+nclude <stdio.h>
+#include <stdlib.h>
+#define LIMIT 1000000
+//sequencia de collatz
+
+int countChain(int number)
+{
+	int count = 1;
+	long collatzNumber;
+	collatzNumber = number;
+	while (collatzNumber != 1)
+	{
+		if (collatzNumber % 2 == 0)
+		{
+			collatzNumber = collatzNumber / 2;
+		}
+		else
+		{
+			collatzNumber = 3 * collatzNumber + 1;
+		}
+		++count;
+	}
+	
+	return count;
+}
+
+int main (void)
+{
+	long value, longestChain;
+	longestChain = 0;
+	int biggestCollatzNumber;
+	for (value = LIMIT; value > 0; --value)
+	{
+		if (countChain(value) > longestChain)
+		{
+			longestChain = countChain(value);
+			biggestCollatzNumber = value;
+		}
+	}
+	
+	printf("maior numero: %d", biggestCollatzNumber);
+		
+	return 0;
+    
+}
+
+

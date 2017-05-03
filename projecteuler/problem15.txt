@@ -1,0 +1,43 @@
+nclude <stdio.h>
+#include <stdlib.h>
+
+//Lattice paths
+
+
+int main (void)
+{
+	// a soma eh todas as subjacentes, logo, eh so calcular das subsequentes
+	
+	long long malha[21][21];
+	int i, j;
+	
+	for(i = 0; i < 21; i++)
+	{
+		malha[i][0] = 1;
+		malha[0][i] = 1;
+	}
+	
+	for(i = 1; i < 21; i++)
+	{
+		for(j = 1; j < 21; j++)
+		{
+			malha[i][j] = malha[i-1][j] + malha[i][j-1];
+		}	
+	}
+	
+	for(i = 0; i < 21; i++)
+	{
+		for(j = 1; j < 21; j++)
+		{
+			printf("%lld ", malha[i][j]);
+		}
+		printf("\n");
+	}
+	
+	printf("%lld", malha[20][20]);
+	
+	return 0;
+    
+}
+
+
