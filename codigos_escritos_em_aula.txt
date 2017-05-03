@@ -122,4 +122,56 @@ int main (void)
     
 }
 
+===============Calcular primos em um vetor utilizando o crivo de eratóstenes=====
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void eliminateMultiples(int array[], int factor, int length)
+{
+	
+	int i;
+	for (i = 2*factor - 1; i < length; i += factor)
+	{
+		array[i] = 0;
+	}
+}
+
+void printArray(int array[], int start, int length)
+{
+	int i;
+	printf("os números primos de %d a %d são: ", start, length);
+	for (i = 0; i < length; i++)
+	{
+		if (array[i] != 0 && array[i] != 1)
+		{
+			printf("%d ", array[i]);
+		}
+	}
+}
+
+int main (void)
+{
+	int numbers[1000];
+	int i;
+	
+	for (i = 0; i < 1000; i++)
+	{
+		numbers[i] = i + 1;
+	}
+	
+	for (i = 0; i < 1000; i++)
+	{
+		if (numbers[i] != 0 && numbers[i] != 1)
+		{
+			eliminateMultiples(numbers, numbers[i], 1000);
+		}
+	}
+	
+	printArray(numbers, 1, 1000);
+	
+	
+	return 0;
+    
+}
 
