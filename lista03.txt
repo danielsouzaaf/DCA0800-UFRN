@@ -23,23 +23,29 @@ int main (void)
 	return 0;
     
 }
+
 ========================================Questão 2====================================================================================
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main (void)
+int main()
 {
 	//Imprimir os múltiplos de 7 menores que 200.
 
 
-	int i;
-	printf("múltiplos de 7 menores que 200: 0 ");
-	for (i = 7; i <= 200; i += 7)
-	printf("%d ", i);
+	int fator, produto;
 
+	printf("os múltiplos de 7 menores que 200 são: ");
+
+	for(fator=0;produto<200;fator=fator+1)
+	{
+    	produto=fator * 7;
+   		if(produto<200)
+   		{
+   			printf("%i\t", produto);
+		}
+	}
 	return 0;
-    
 }
 
 ========================================Questão 3====================================================================================
@@ -64,44 +70,27 @@ int main (void)
 ========================================Questão 4====================================================================================
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-void divisores(int n)
+int main()
 {
-	int i;
-	printf("divisores = ");
-	for (i = 1; i <= n; i++)
-	{
-		if (n % i == 0)
-		{
-			printf("%d", i);
-			
-			if (i < n)
-			{
-				printf(", ");
-			}
-		}
-		
-	}
-	
-}
-
-int main (void)
-{
-
 	//Calcular os divisores de um nº qualquer.
 
 
-	int n;
-	printf("digite o número que você deseja checar os divisores: ");
-	scanf("%d", &n);
-	
-	divisores(n);
-	
-	return 0;
-    
-}
+	int x, y;
+	printf("digite um numero qualquer para descobrir seus divisores \n");
+	scanf("%i", &x);
 
+	for(y=1;y<=x;y=y+1)
+	{
+
+    		if(x%y==0)
+		{
+        	printf("%i\t", y);
+    		}
+	}
+
+	return 0;
+}
 ========================================Questão 5====================================================================================
 #include <stdio.h>
 #include <stdlib.h>
@@ -275,34 +264,32 @@ int main()
 #include <stdio.h>
 #include <stdlib.h>
 
-
-int checkPrime(int n)
+int main()
 {
-	int i;
-	if (n <= 1) return 0;
-	//otimização do código seguindo o clivo de Eratóstenes.
-	for (i = 2; i*i <= n; i++)
-	{
-		if (n % i == 0) return 0;
-	}
-	return 1;
-}
-
-int main (void)
-{
-	
 	//Ler um número e escreva se ele "é primo" ou "não é primo".
+	
 
+	int x, y;
+	printf("escreva um numero qualquer natural maior que zero \n");
+	scanf("%i", &x);
 
-	int i;
-	i = 0;
-	printf("digite o numero que vc deseja checar se eh primo: ");
-	scanf("%d", &i);
-	if (checkPrime(i) == 1) printf("é primo");
-	else printf("não é primo");	
+	y=1;
+	do
+	{
 
+    		y=y+1;
+
+    	}while(x%y!=0);
+
+	if(x==y)
+	{
+		printf("o numero eh primo");
+	}
+	else
+	{
+		printf("o numero nao eh primo");
+	}
 	return 0;
-    
 }
 
 ========================================Questão 12===================================================================================
@@ -343,7 +330,7 @@ int main (void)
 		}
 		if(atualprimo < 12) i++;
 	}
-	printf("diferença entre o 6primo e o 12primo = %d - %d = %d", seisprimo, i, seisprimo - i);
+	printf("diferença entre o 12primo e o 6primo = %d - %d = %d", i, seisprimo, i - seisprimo);
 		
 
 	return 0;
@@ -618,7 +605,6 @@ int main (void)
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 void printFactors(int numero)
 {
@@ -677,7 +663,6 @@ int main (void)
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 void printArrayTree(int array[], int length)
 {
@@ -717,7 +702,7 @@ int main (void)
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
+
 
 void printArrayTree(int array[], int length)
 {
@@ -778,7 +763,6 @@ int main (void)
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 void countCharsAndWords(char text[])
 {
