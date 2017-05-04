@@ -28,7 +28,7 @@ int main (void)
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+int main (void)
 {
 	//Imprimir os múltiplos de 7 menores que 200.
 
@@ -71,7 +71,7 @@ int main (void)
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+int main (void)
 {
 	//Calcular os divisores de um nº qualquer.
 
@@ -109,7 +109,7 @@ int fatorial(int x)
     }
 }
  
-int main()
+int main (void)
 {
 	
 	//Para calcular o fatorial de um número qualquer.
@@ -128,7 +128,7 @@ int main()
 #include <stdlib.h>
 
  
-int main()
+int main (void)
 {
 	
 	//Imprimir o menor inteiro positivo x cujo quadrado é superior a um valor L dado.
@@ -160,7 +160,7 @@ void tabuada(int n)
 	}
 }
 
-int main()
+int main (void)
 {
 	
 	//Imprimir a tabuada do número 4.
@@ -184,7 +184,7 @@ void tabuada(int n)
 	}
 }
 
-int main()
+int main (void)
 {
 	
 	//Imprimir a tabuada de qualquer número n.
@@ -201,7 +201,7 @@ int main()
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+int main (void)
 {
 	
 	//Calcular e mostrar a média aritmética dos números pares compreendidos entre 13 e 73.
@@ -231,7 +231,7 @@ void printArray(int x[], int length)
 	printf("\n Quantidade de elementos: %d \n", length);
 }
 
-int main()
+int main (void)
 {
 	
 	//Ler 10 valores, um de cada vez, e contar quantos deles estão no intervalo [10,50] e quantos deles estão fora deste intervalo, mostrando estas informações.
@@ -264,7 +264,7 @@ int main()
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+int main (void)
 {
 	//Ler um número e escreva se ele "é primo" ou "não é primo".
 	
