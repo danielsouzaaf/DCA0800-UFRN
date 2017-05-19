@@ -2,7 +2,7 @@
 #define MATRIX_H_
 
 void populateWithRandom(float matrix[200][200], int rows, int columns,
-  int minValue, int maxValue);
+  float minValue, float maxValue);
   
 void setMatrixValue(float matrix[200][200], int row, int column,
   float value);

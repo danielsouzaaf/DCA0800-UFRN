@@ -4,7 +4,7 @@
 #include "matrix.h"
 
 void populateWithRandom(float matrix[200][200], int rows, int columns,
-  int minValue, int maxValue)
+  float minValue, float maxValue)
  {
 	 srand(time(NULL));
 	 int i, j;
@@ -15,7 +15,8 @@ void populateWithRandom(float matrix[200][200], int rows, int columns,
 		 {
 			 //TODO: perguntar ao professor como gerar um float aleatório com um valor máximo e um mínimo
 			 //matrix[i][j] = ((float)rand() / (maxValue - minValue)) + minValue;
-			 matrix[i][j] = (rand() % (maxValue - minValue)) + minValue;
+			 matrix[i][j] = minValue + maxValue*((float)(rand())/RAND_MAX);
+			 //matrix[i][j] = (rand() % (maxValue - minValue)) + minValue;
 
 		 }
 	 } 
