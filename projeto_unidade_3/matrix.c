@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "matrix.h"
 
-void populateWithRandom(float matrix[1000][1000], int columns, int rows,
+void populateWithRandom(float matrix[1000][1000], int rows, int columns,
   int minValue, int maxValue)
  {
 	 srand(time(NULL));
@@ -18,11 +18,10 @@ void populateWithRandom(float matrix[1000][1000], int columns, int rows,
 			 matrix[i][j] = (rand() % (maxValue - minValue)) + minValue;
 
 		 }
-	 }
-	 
+	 } 
  }
  
-void printMatrix(float matrix[1000][1000], int columns, int rows)
+void printMatrix(float matrix[1000][1000], int rows, int columns)
 {
 	int i, j;
 	printf("representação gráfica da matriz: \n");
@@ -35,7 +34,11 @@ void printMatrix(float matrix[1000][1000], int columns, int rows)
 		 printf("\n");
 	}
 	printf("fim da representação gráfica\n");
+}
 
-	
+void setMatrixValue(float matrix[1000][1000], int row, int column,
+ float value)
+{
+	matrix[row][column] = value; 
 }
 
