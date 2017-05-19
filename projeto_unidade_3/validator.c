@@ -1,7 +1,6 @@
 #include "validator.h"
 
-int canSumMatrices(float matrixA[1000][1000], float matrixB[1000][1000],
- int rowsA, int columnsA, int rowsB, int columnsB)
+int canSumMatrices(int rowsA, int columnsA, int rowsB, int columnsB)
 {
 	if (rowsA != rowsB || columnsA != columnsB)
 	{
@@ -11,9 +10,7 @@ int canSumMatrices(float matrixA[1000][1000], float matrixB[1000][1000],
 	return 1;
 }
 
-int canSubtractMatrices(float matrixA[1000][1000],
- float matrixB[1000][1000], int rowsA, int columnsA, int rowsB,
-  int columnsB)
+int canSubtractMatrices(int rowsA, int columnsA, int rowsB, int columnsB)
 {
 	if (rowsA != rowsB || columnsA != columnsB)
 	{
@@ -23,8 +20,7 @@ int canSubtractMatrices(float matrixA[1000][1000],
 	return 1;
 }
 
-int canMultiplyMatrices(float matrixA[1000][1000], float matrixB[1000][1000],
- int rowsA, int columnsA, int rowsB, int columnsB)
+int canMultiplyMatrices(int columnsA, int rowsB)
 {
 	if (columnsA != rowsB)
 	{
@@ -34,8 +30,8 @@ int canMultiplyMatrices(float matrixA[1000][1000], float matrixB[1000][1000],
 	return 1;
 }
 
-int isRowColumnInsideMatrixRowsAndColumns(float matrix[1000][1000],
- int rows, int columns, int row, int column)
+int isRowColumnInsideMatrixRowsAndColumns(int rows, int columns,
+ int row, int column)
 {
 	if (row >= rows || column >= columns)
 	{

@@ -3,7 +3,7 @@
 #include "validator.h"
 int main(int argc, char **argv)
 {
-	float matrizA[1000][1000], matrizB[1000][1000];// matrizC[1000][1000];
+	float matrizA[200][200], matrizB[200][200], matrizC[200][200];
 	float valor;
 	int opcao, qtdLinhasA, qtdColunasA, qtdLinhasB, qtdColunasB;	
 	int valMax, valMin;
@@ -77,8 +77,8 @@ int main(int argc, char **argv)
 				printf("digite o valor:");
 				scanf("%f", &valor);
 				
-				if (isRowColumnInsideMatrixRowsAndColumns(matrizA,
-				 qtdLinhasA, qtdColunasA, linha, coluna) == 1){
+				if (isRowColumnInsideMatrixRowsAndColumns(qtdLinhasA,
+				 qtdColunasA, linha, coluna) == 1){
 					 setMatrixValue(matrizA, linha, coluna, valor);
 					 printf("***o valor %f foi inserido com sucesso!***"
 					 , valor);
@@ -97,19 +97,28 @@ int main(int argc, char **argv)
 				printf("digite o valor:");
 				scanf("%f", &valor);
 				
-				if (isRowColumnInsideMatrixRowsAndColumns(matrizB,
-				 qtdLinhasB, qtdColunasB, linha, coluna) == 1){
+				if (isRowColumnInsideMatrixRowsAndColumns(qtdLinhasB,
+				  qtdColunasB, linha, coluna) == 1){
 					 setMatrixValue(matrizB, linha, coluna, valor);
 					 printf("***o valor %f foi inserido com sucesso!***"
 					 , valor);
 				 }
-				 else
-				 {
+				 else{
 					 printf("a linha %d e a coluna %d está fora das linhas e colunas definidas previamente.", linha, coluna);	
 				 }
 				break;
 			case 7:
 				//Calcular A+B
+				if (canSumMatrices(qtdLinhasA, qtdColunasA, qtdLinhasB,
+				 qtdColunasB) == 1){
+					 sumMatrices(matrizA, matrizB, matrizC, qtdLinhasA,
+					  qtdColunasA, qtdLinhasC, qtdColunasC);
+					  printf("***soma das matrizes realizada com sucesso!***");
+				 }
+				else {
+					printf("a quantidade de linhas e colunas das duas matrizes são diferentes. Não é possível somar!");
+				}
+				
 				break;
 			case 8:
 				//Calcular A-B
@@ -119,14 +128,15 @@ int main(int argc, char **argv)
 				break;
 			case 10:
 				//Imprimir a matriz A
-				printMatrix(matrizA, qtdColunasA, qtdLinhasA);
+				printMatrix(matrizA, qtdLinhasA, qtdColunasA);
 				break;
 			case 11:
 				//Imprimir a matriz B
-				printMatrix(matrizB, qtdColunasB, qtdLinhasB);
+				printMatrix(matrizB, qtdLinhasB, qtdColunasB);
 				break;
 			case 12:
 				//Imprimir a matriz c
+				printMatrix(matrizC, qtdLinhasC, qtdColunasC);
 				break;
 				
 		}
