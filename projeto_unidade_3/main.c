@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "matrix.h"
 #include "validator.h"
+
+#define SOMA 1
+#define SUBTRACAO 2
+#define MULTIPLICACAO 3
+
+
 int main(int argc, char **argv)
 {
 	float matrizA[200][200], matrizB[200][200], matrizC[200][200];
@@ -9,6 +15,8 @@ int main(int argc, char **argv)
 	int valMax, valMin;
 	int qtdLinhasC, qtdColunasC;
 	int linha, coluna;
+	int ultimaOperacao;
+	ultimaOperacao = 0;
 	valor = 0.0;
 	linha = coluna = 0;
 	qtdLinhasA = qtdColunasA = qtdLinhasB = qtdColunasB = opcao = 0;
@@ -111,8 +119,8 @@ int main(int argc, char **argv)
 				//Calcular A+B
 				if (canSumMatrices(qtdLinhasA, qtdColunasA, qtdLinhasB,
 				 qtdColunasB) == 1){
-					 sumMatrices(matrizA, matrizB, matrizC, qtdLinhasA,
-					  qtdColunasA, qtdLinhasC, qtdColunasC);
+					 ultimaOperacao = sumMatrices(matrizA, matrizB,
+					  matrizC, qtdLinhasA, qtdColunasA);
 					  printf("***soma das matrizes realizada com sucesso!***");
 				 }
 				else {
@@ -136,7 +144,14 @@ int main(int argc, char **argv)
 				break;
 			case 12:
 				//Imprimir a matriz c
-				printMatrix(matrizC, qtdLinhasC, qtdColunasC);
+				if (ultimaOperacao == SOMA || ultimaOperacao == SUBTRACAO)
+				{
+					printMatrix(matrizC, qtdLinhasA, qtdColunasB);
+				}
+				else if(ultimaOperacao == 3)
+				{
+					printMatrix(matrizC, qtdColunasA, qtdLinhasB);
+				}
 				break;
 				
 		}

@@ -9,9 +9,9 @@ void setMatrixValue(float matrix[200][200], int row, int column,
   
 void printMatrix(float matrix[200][200], int rows, int columns);
  
-void sumMatrices(float firstMatrix[200][200],
+int sumMatrices(float firstMatrix[200][200],
  float secondMatrix[200][200], float resultMatrix[200][200], 
- int rows, int columns, int resultRows, int resultColumns);
+ int rows, int columns);
 
 void subtractMatrices(float firstMatrix[200][200],
  float secondMatrix[200][200], float resultMatrix[200][200], 

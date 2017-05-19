@@ -42,20 +42,20 @@ void setMatrixValue(float matrix[200][200], int row, int column,
 	matrix[row][column] = value; 
 }
 
-void sumMatrices(float firstMatrix[200][200],
+int sumMatrices(float firstMatrix[200][200],
  float secondMatrix[200][200], float resultMatrix[200][200], 
- int rows, int columns, int resultRows, int resultColumns)
+ int rows, int columns)
 {
 	int i, j;
-	resultRows = rows;
-	resultColumns = columns;
 	
-	for (i = 0; i < resultRows; ++i)
+	for (i = 0; i < rows; ++i)
 	{
-		for (j = 0; j < resultColumns; j++)
+		for (j = 0; j < columns; j++)
 		{
 			resultMatrix[i][j] = firstMatrix[i][j] + secondMatrix[i][j];
 		}
 	}
+	
+	return 1;
 }
 
