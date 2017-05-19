@@ -3,11 +3,13 @@
 
 int main(int argc, char **argv)
 {
-	float matrizA[1000][1000];//, matrizB[1000][1000], matrizC[1000][1000];
+	float matrizA[1000][1000], matrizB[1000][1000];// matrizC[1000][1000];
 	
 	int opcao, qtdLinhasA, qtdColunasA, qtdLinhasB, qtdColunasB;	
 	int valMax, valMin;
+	int qtdLinhasC, qtdColunasC;
 	qtdLinhasA = qtdColunasA = qtdLinhasB = qtdColunasB = opcao = 0;
+	qtdLinhasC = qtdColunasC = 0;
 	valMax = valMin = 0;
 	
 	do
@@ -32,23 +34,60 @@ int main(int argc, char **argv)
 		switch (opcao)
 		{
 			case 1:
-				printf("digite a quantidade de linhas da matriz a:");
+				printf("digite a quantidade de linhas da matriz A:");
 				scanf("%d", &qtdLinhasA);
-				printf("digite a quantidade de colunas da matriz a:");
+				printf("digite a quantidade de colunas da matriz A:");
 				scanf("%d", &qtdColunasA);
 				break;
+			case 2:
+				printf("digite a quantidade de linhas da matriz B:");
+				scanf("%d", &qtdLinhasB);
+				printf("digite a quantidade de colunas da matriz B:");
+				scanf("%d", &qtdColunasB);
+				break;
 			case 3:
-				printf("digite o valor mínimo para os números da matriz a");
+				printf("digite o valor mínimo para os números da matriz A:");
 				scanf("%d", &valMax);
-				printf("digite o valor máximo para os números da matriz b:");
+				printf("digite o valor máximo para os números da matriz A:");
 				scanf("%d", &valMin);
 				populateWithRandom(matrizA, qtdColunasA, qtdLinhasA,
 				 valMax, valMin);
 				break;
+			case 4:
+				printf("digite o valor mínimo para os números da matriz B:");
+				scanf("%d", &valMax);
+				printf("digite o valor máximo para os números da matriz B:");
+				scanf("%d", &valMin);
+				populateWithRandom(matrizB, qtdColunasB, qtdLinhasB,
+				 valMax, valMin);
+				break;
+			case 5:
+				//Atribuir valor para elemento da matriz A
+				break;
+			case 6:
+				//Atribuir valor para elemento da matriz B
+				break;
+			case 7:
+				//Calcular A+B
+				break;
+			case 8:
+				//Calcular A-B
+				break;
+			case 9:
+				//Calcular A*B
+				break;
 			case 10:
 				printMatrix(matrizA, qtdColunasA, qtdLinhasA);
+				break;
+			case 11:
+				printMatrix(matrizB, qtdColunasB, qtdLinhasB);
+				break;
+			case 12:
+				//Imprimir a matriz c
+				break;
 				
 		}
+		printf("\n");
 	}
 	while (opcao < 13);
 	

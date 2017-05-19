@@ -30,7 +30,7 @@ void printMatrix(float matrix[1000][1000], int columns, int rows)
 	{
 		 for(j = 0; j < columns; ++j)
 		 {
-			 printf("%8.3f", matrix[i][j]);
+			 printf("%8.3f	", matrix[i][j]);
 		 }
 		 printf("\n");
 	}
