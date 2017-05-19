@@ -13,12 +13,13 @@ int sumMatrices(float firstMatrix[200][200],
  float secondMatrix[200][200], float resultMatrix[200][200], 
  int rows, int columns);
 
-void subtractMatrices(float firstMatrix[200][200],
+int subtractMatrices(float firstMatrix[200][200],
  float secondMatrix[200][200], float resultMatrix[200][200], 
- int rows, int columns, int resultRows, int resultColumns);
+ int rows, int columns);
  
-void multiplyMatrices(float firstMatrix[200][200],
+int multiplyMatrices(float firstMatrix[200][200],
  float secondMatrix[200][200], float resultMatrix[200][200], 
- int rows, int columns, int resultRows, int resultColumns);
+ int firstMatrixRows, int firstMatrixColumns, int secondMatrixRows, 
+ int secondMatrixColumns);
 
 #endif // MATRIX_H_

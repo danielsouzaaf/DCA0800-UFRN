@@ -129,10 +129,21 @@ int main(int argc, char **argv)
 				
 				break;
 			case 8:
-				//Calcular A-B
+				if (canSubtractMatrices(qtdLinhasA, qtdColunasA, qtdLinhasB,
+				 qtdColunasB) == 1){
+					 ultimaOperacao = subtractMatrices(matrizA, matrizB,
+					  matrizC, qtdLinhasA, qtdColunasA);
+					  printf("***subtração das matrizes realizada com sucesso!***");
+				 }
+				else {
+					printf("a quantidade de linhas e colunas das duas matrizes são diferentes. Não é possível subtrair!");
+				}
 				break;
 			case 9:
 				//Calcular A*B
+				if (canMultiplyMatrices(qtdColunasA, qtdColunasB) == 1){
+					ultimaOperacao = multiplyMatrices(matrizA, matrizB, matrizC, qtdLinhasA, qtdColunasA, qtdLinhasB, qtdColunasB);
+				}
 				break;
 			case 10:
 				//Imprimir a matriz A
