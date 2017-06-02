@@ -6,6 +6,25 @@
 #define SUBTRACAO 2
 #define MULTIPLICACAO 3
 
+void printMenu()
+{
+	printf("PROGRAMA DE MANIPULACAO DE MATRIZES \n \
+		 (1) Definir o tamanho da matriz A \n \
+		 (2) Definir o tamanho da matriz B \n \
+		 (3) Preencher a matriz A com valores aleatórios \n \
+		 (4) Preencher a matriz B com valores aleatórios \n \
+		 (5) Atribuir valor para um elemento da matriz A \n \
+		 (6) Atribuir valor para um elemento da matriz B \n \
+		 (7) Calcular A+B \n \
+		 (8) Calcular A-B \n \
+		 (9) Calcular A*B \n \
+		(10) Imprimir matriz A \n \
+		(11) Imprimir matriz B \n \
+		(12) Imprimir matriz C \n \
+		(13) Sair\n \
+		Digite sua opção: " );
+}
+
 
 int main(int argc, char **argv)
 {
@@ -25,21 +44,7 @@ int main(int argc, char **argv)
 	
 	do
 	{
-		printf("PROGRAMA DE MANIPULACAO DE MATRIZES \n \
-		 (1) Definir o tamanho da matriz A \n \
-		 (2) Definir o tamanho da matriz B \n \
-		 (3) Preencher a matriz A com valores aleatórios \n \
-		 (4) Preencher a matriz B com valores aleatórios \n \
-		 (5) Atribuir valor para um elemento da matriz A \n \
-		 (6) Atribuir valor para um elemento da matriz B \n \
-		 (7) Calcular A+B \n \
-		 (8) Calcular A-B \n \
-		 (9) Calcular A*B \n \
-		(10) Imprimir matriz A \n \
-		(11) Imprimir matriz B \n \
-		(12) Imprimir matriz C \n \
-		(13) Sair\n \
-		Digite sua opção: " );
+		printMenu();
 		scanf("%d", &opcao);
 		
 		switch (opcao)
