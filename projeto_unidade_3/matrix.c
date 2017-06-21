@@ -13,11 +13,9 @@ void populateWithRandom(float matrix[200][200], int rows, int columns,
 	 {
 		 for(j = 0; j < columns; ++j)
 		 {
-			 //TODO: perguntar ao professor como gerar um float aleatório com um valor máximo e um mínimo
-			 //matrix[i][j] = ((float)rand() / (maxValue - minValue)) + minValue;
-			 matrix[i][j] = minValue + maxValue*((float)(rand())/RAND_MAX);
-			 //matrix[i][j] = (rand() % (maxValue - minValue)) + minValue;
-
+			 
+			 matrix[i][j] = minValue + (maxValue-minValue)*((float)(rand())/RAND_MAX);
+			 
 		 }
 	 } 
  }
@@ -95,7 +93,7 @@ int multiplyMatrices(float firstMatrix[200][200],
 			}
 		}
 	}
-	
+	//retorna um número que indica qual foi a última operação feita na matriz
 	return 3;
 	 
  }
